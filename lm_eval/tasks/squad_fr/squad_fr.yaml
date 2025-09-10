@@ -1,9 +1,9 @@
-tag: squad_fr
 task: squad_fr
 dataset_path: qwant/squad_fr
 dataset_name: plain_text
 output_type: generate_until
-test_split: test
+validation_split: validation
+training_split: train
 doc_to_text: "Contexte: {{context}}\n\nQuestion: {{question}}\n\nRéponse:"
 doc_to_target: '{{answers["text"][0]}}'
 process_results: !function utils.process_results_qa

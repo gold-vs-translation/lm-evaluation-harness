@@ -3,9 +3,9 @@ import string
 
 
 def process_results_qa(doc, results):
-    preds = results[0]
+    pred = results[0]
     reference = doc["answers"]["text"][0]
-    exact_match = exact(reference, preds)
+    exact_match = exact(reference, pred)
     return {"exact_match": exact_match}
 
 
@@ -30,5 +30,5 @@ def normalize_answer(s):
 
 
 # Exact match (the normalized answer exactly match the gold answer)
-def exact(predictions, references):
-    return int(normalize_answer(references[0]) == normalize_answer(predictions[0]))
+def exact(prediction, reference):
+    return int(normalize_answer(reference) == normalize_answer(prediction))
