@@ -1,9 +1,6 @@
 include: "_default_template_yaml"
-tag:
-  - french_bench
-  - french_bench_gen
-task: french_bench_fquadv2_hasAns_plain
-dataset_path: manu/fquad2_test
+task: french_bench_fquadv2_hasAns_custom
+dataset_path: gold-vs-trans/fquad-hasAns-with-ids
 output_type: generate_until
 validation_split: valid_hasAns
 test_split: test_hasAns
