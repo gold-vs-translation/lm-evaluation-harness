@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_ar
+process_docs: !function utils.process_docs_ar
+doc_to_text: "سيا: {{context}}\n\nسؤال: {{question}}\n\nإجابة:"

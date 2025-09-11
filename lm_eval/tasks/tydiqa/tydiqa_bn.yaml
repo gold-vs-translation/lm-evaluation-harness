@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_bn
+process_docs: !function utils.process_docs_bn
+doc_to_text: "প্রসঙ্গ: {{context}}\n\nপ্রশ্ন: {{question}}\n\nউত্তর:"

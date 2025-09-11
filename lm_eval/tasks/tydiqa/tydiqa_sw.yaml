@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_sw
+process_docs: !function utils.process_docs_sw
+doc_to_text: "Muktadha: {{context}}\n\nSwali: {{question}}\n\nJibu:"

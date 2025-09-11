@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_fi
+process_docs: !function utils.process_docs_fi
+doc_to_text: "Konteksti: {{context}}\n\nKysymys: {{question}}\n\nVastaus:"

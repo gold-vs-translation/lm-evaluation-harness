@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_ru
+process_docs: !function utils.process_docs_ru
+doc_to_text: "Контекст: {{context}}\n\nВопрос: {{question}}\n\nОтвет:"

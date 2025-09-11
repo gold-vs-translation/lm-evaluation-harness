@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_en
+process_docs: !function utils.process_docs_en
+doc_to_text: "Context: {{context}}\n\nQuestion: {{question}}\n\nAnswer:"

@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_ko
+process_docs: !function utils.process_docs_ko
+doc_to_text: "맥락: {{context}}\n\n질문: {{question}}\n\n답변:"

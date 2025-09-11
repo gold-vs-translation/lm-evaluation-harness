@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: tydiqa_id
+process_docs: !function utils.process_docs_id
+doc_to_text: "Konteks: {{context}}\n\nPertanyaan: {{question}}\n\nJawaban:"
