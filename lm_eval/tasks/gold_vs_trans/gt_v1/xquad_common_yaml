@@ -1,0 +1,6 @@
+include: gt_v1_common_yaml
+dataset_path: xquad
+output_type: generate_until
+validation_split: validation
+doc_to_text: null
+doc_to_target: '{{answers["text"]}}'

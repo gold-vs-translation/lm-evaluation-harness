@@ -1,0 +1,7 @@
+include: gt_v1_common_yaml
+dataset_path: google-research-datasets/tydiqa
+dataset_name: secondary_task
+training_split: train
+validation_split: validation
+doc_to_text: null
+doc_to_target: '{{answers["text"]}}'

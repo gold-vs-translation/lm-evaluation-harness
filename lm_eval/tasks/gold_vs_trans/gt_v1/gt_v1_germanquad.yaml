@@ -1,0 +1,7 @@
+include: gt_v1_common_yaml
+task: gt_v1_germanquad
+dataset_path: deepset/germanquad
+dataset_name: plain_text
+test_split: test
+doc_to_text: "Kontext: {{context}}\n\nFrage: {{question}}\n\nAntwort:"
+doc_to_target: '{{answers["text"]}}'

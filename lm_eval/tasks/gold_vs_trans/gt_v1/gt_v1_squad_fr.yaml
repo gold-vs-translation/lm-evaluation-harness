@@ -1,0 +1,8 @@
+include: gt_v1_common_yaml
+task: gt_v1_squad_fr
+dataset_path: qwant/squad_fr
+dataset_name: plain_text
+validation_split: validation
+training_split: train
+doc_to_text: "Contexte: {{context}}\n\nQuestion: {{question}}\n\nRéponse:"
+doc_to_target: '{{answers["text"]}}'

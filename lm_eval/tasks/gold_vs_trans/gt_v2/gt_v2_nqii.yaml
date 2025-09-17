@@ -1,0 +1,9 @@
+include: gt_v2_common_yaml
+task: gt_v2_nqii
+dataset_path: gold-vs-trans/icelandic-qa-NQiI
+dataset_name: icelandic-qa-NQiI
+training_split: train
+validation_split: validation
+process_docs: !function utils.filter_docs_nonempty_answers
+doc_to_text: "Samhengi: {{context}}\n\nSpurning: {{question}}\n\nSvar:"
+doc_to_target: '{{answers["text"]}}'

@@ -1,0 +1,15 @@
+include: gt_v2_common_yaml
+task: gt_v2_fquad
+dataset_path: gold-vs-trans/fquad-hasAns-with-ids
+test_split: test
+fewshot_split: valid
+# fewshot_config:
+#   sampler: first_n
+validation_split: valid_hasAns
+test_split: test_hasAns
+fewshot_split: valid_hasAns
+doc_to_text: "Contexte: {{context}}\n\nQuestion: {{question}}\n\nRéponse:"
+doc_to_target: "{{answers.text}}"
+# Is this actually used in any reachable code?
+# should_decontaminate: true
+# doc_to_decontamination_query: context

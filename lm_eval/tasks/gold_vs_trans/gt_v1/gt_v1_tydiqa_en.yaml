@@ -1,0 +1,4 @@
+include: tydiqa_common_yaml
+task: gt_v1_tydiqa_en
+process_docs: !function gt_v1_tydiqa_utils.process_docs_en
+doc_to_text: "Context: {{context}}\n\nQuestion: {{question}}\n\nAnswer:"
