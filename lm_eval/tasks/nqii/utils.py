@@ -24,6 +24,7 @@ probability that a question is unanswerable.
 
 import collections
 import string
+import datasets
 
 
 def normalize_answer(s):
@@ -74,3 +75,8 @@ def process_results_qa(doc, results):
     f1_sum = compute_f1(reference, preds)
     exact_match = compute_exact(reference, preds)
     return {"f1": f1_sum, "exact_match": exact_match}
+
+def filter_docs_nonempty_answers(
+    dataset: datasets.Dataset
+) -> datasets.Dataset:
+    return dataset.filter(lambda doc: len(doc["answers"]["text"]) > 0)

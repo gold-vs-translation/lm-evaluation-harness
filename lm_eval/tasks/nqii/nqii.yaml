@@ -4,6 +4,7 @@ dataset_name: icelandic-qa-NQiI
 output_type: generate_until
 training_split: train
 validation_split: validation
+process_docs: !function utils.filter_docs_nonempty_answers
 doc_to_text: "Samhengi: {{context}}\n\nSpurning: {{question}}\n\nSvar:"
 doc_to_target: '{{answers["text"][0]}}'
 process_results: !function utils.process_results_qa
