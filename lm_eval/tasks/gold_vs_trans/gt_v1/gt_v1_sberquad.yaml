@@ -1,6 +1,6 @@
 include: gt_v1_common_yaml
 task: gt_v1_sberquad
 dataset_path: kuznetsoffandrey/sberquad
-test_split: test
+test_split: validation
 doc_to_text: "Контекст: {{context}}\n\nВопрос: {{question}}\n\nОтвет:"
 doc_to_target: '{{answers["text"]}}'
