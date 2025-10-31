@@ -1,0 +1,3 @@
+include: swedish_skolprov_common_yaml
+task: gt_skolprov_kunskapsprov_audionom
+dataset_name: "kunskapsprov_audionom"

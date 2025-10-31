@@ -1,0 +1,44 @@
+dataset_path: Ekgren/swedish_skolprov
+output_type: multiple_choice
+
+test_split: train
+fewshot_split: train
+
+# The data set already provides a very nice prompt.
+doc_to_text: |-
+  {{ prompt | trim }}
+
+# We expand the options option_a .. option_e,
+# Some options e.g. option_d and option_e can be None OR the string ‘None’ → filter out.
+doc_to_choice: |-
+  [
+  {% set first = true %}
+  {% if option_a is not none and option_a != "None" %}
+    "A"{% set first = false %}
+  {% endif %}
+  {% if option_b is not none and option_b != "None" %}
+    {% if not first %}, {% endif %}"B"{% set first = false %}
+  {% endif %}
+  {% if option_c is not none and option_c != "None" %}
+    {% if not first %}, {% endif %}"C"{% set first = false %}
+  {% endif %}
+  {% if option_d is not none and option_d != "None" %}
+    {% if not first %}, {% endif %}"D"{% set first = false %}
+  {% endif %}
+  {% if option_e is not none and option_e != "None" %}
+    {% if not first %}, {% endif %}"E"
+  {% endif %}
+  ]
+
+# The labels in the data set are sometimes ‘C’, sometimes “a”, sometimes ‘E’.
+# We normalise to capital letters so that all subsets can handle them.
+doc_to_target: "{{ answer | upper }}"
+
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+
+metadata:
+  description: "Ekgren/swedish_skolprov; MC, A-E, variable length, takes existing prompt"
+  version: 1.0

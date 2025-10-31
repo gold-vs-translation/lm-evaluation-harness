@@ -1,0 +1,3 @@
+include: swedish_skolprov_common_yaml
+task: gt_skolprov_kunskapsprov_tandlakare
+dataset_name: "kunskapsprov_tandläkare"

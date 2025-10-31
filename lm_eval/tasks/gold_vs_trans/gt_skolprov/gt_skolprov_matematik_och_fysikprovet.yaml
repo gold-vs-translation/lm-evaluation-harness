@@ -1,0 +1,3 @@
+include: swedish_skolprov_common_yaml
+task: gt_skolprov_matematik_och_fysikprovet
+dataset_name: "matematik_och_fysikprovet"
