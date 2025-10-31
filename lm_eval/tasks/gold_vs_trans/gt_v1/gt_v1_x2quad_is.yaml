@@ -1,0 +1,5 @@
+include: xquad_common_yaml
+task: gt_v1_x2quad_is
+dataset_path: gold-vs-trans/x2quad
+dataset_name: x2quad-gtrans-is
+doc_to_text: "Samhengi: {{context}}\n\nSpurning: {{question}}\n\nSvar:"

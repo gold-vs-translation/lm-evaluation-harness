@@ -1,0 +1,5 @@
+include: xquad_common_yaml
+task: gt_v1_x2quad_nb
+dataset_path: gold-vs-trans/x2quad
+dataset_name: x2quad-dln-nb
+doc_to_text: "Kontekst: {{context}}\n\nSpørsmål: {{question}}\n\nSvar:"
