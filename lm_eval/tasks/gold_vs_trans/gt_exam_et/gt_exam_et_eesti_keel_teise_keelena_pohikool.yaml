@@ -1,0 +1,3 @@
+include: exam_et_common_yaml
+task: gt_exam_et_eesti_keel_teise_keelena_pohikool
+dataset_name: "eesti keel teise keelena (põhikool)"

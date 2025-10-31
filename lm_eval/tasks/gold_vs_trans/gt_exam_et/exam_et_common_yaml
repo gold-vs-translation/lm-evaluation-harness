@@ -1,0 +1,37 @@
+dataset_path: TalTechNLP/exam_et
+output_type: multiple_choice
+
+test_split: train
+fewshot_split: train
+
+# doc_to_text specifies the prompt structure. An example:
+# Vali selgitusele vastav mõiste. Viidi läbi 1992. aasta suvel ning kõik seni käigus olnud rublad  asendati Eesti kroonidega.
+# 1. Erastamine
+# 2. Glasnost
+# 3. Perestroika
+# 4. Rahareform
+# Vastus (sisesta number 1–4):
+doc_to_text: |-
+  {{ küsimus }}
+  {% for opt in vastusevariandid %}
+  {{ loop.index }}. {{ opt }}
+  {% endfor %}
+  Vastus (sisesta number 1–{{ vastusevariandid|length }}):
+
+# The answer options: Generates, for example, [1, 2, 3, 4] – regardless of how many options there are.
+doc_to_choice: |-
+  [ {% for _ in vastusevariandid -%}
+    "{{ loop.index }}"{% if not loop.last %}, {% endif %}
+  {%- endfor %} ]
+
+# What is the correct label (the dataset is 0-based → +1):
+doc_to_target: "{{ vastus }}"
+
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+
+metadata:
+  description: "TalTechNLP/exam_et; MC with variable number of options, numbered"
+  version: 1.0
