@@ -1,4 +1,4 @@
-dataset_path: TalTechNLP/exam_et
+dataset_path: gold-vs-trans/exam_et_with_ids
 output_type: multiple_choice
 
 test_split: train
