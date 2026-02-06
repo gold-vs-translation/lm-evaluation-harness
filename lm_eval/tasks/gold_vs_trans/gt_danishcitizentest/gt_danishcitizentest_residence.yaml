@@ -1,0 +1,3 @@
+include: danishcitizentest_common_yaml
+task: gt_danishcitizentest_residence
+dataset_name: residence
