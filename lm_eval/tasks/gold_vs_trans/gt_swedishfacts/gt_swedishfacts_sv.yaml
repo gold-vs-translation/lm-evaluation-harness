@@ -1,0 +1,5 @@
+include: gt_swedishfacts_common_yaml
+task: gt_swedishfacts_sv
+doc_to_text: "Fråga: {{question_sv}}\nSvar:"
+doc_to_target: "{{answer_sv}}"
+process_results: !function utils.process_results_qa_sv
