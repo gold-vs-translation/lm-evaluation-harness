@@ -1,0 +1,6 @@
+include: _gt_includebase_common_yaml
+task: gt_includebase_et
+dataset_name: Estonian
+doc_to_text: "{{question.strip()}}\n(A) {{option_a}}\n(B) {{option_b}}\n(C) {{option_c}}\n(D) {{option_d}}\nVastus:"
+metadata:
+  version: 0.0

@@ -1,0 +1,6 @@
+include: _gt_includebase_common_yaml
+task: gt_includebase_lt
+dataset_name: Lithuanian
+doc_to_text: "{{question.strip()}}\n(A) {{option_a}}\n(B) {{option_b}}\n(C) {{option_c}}\n(D) {{option_d}}\nAtsakymas:"
+metadata:
+  version: 0.0
