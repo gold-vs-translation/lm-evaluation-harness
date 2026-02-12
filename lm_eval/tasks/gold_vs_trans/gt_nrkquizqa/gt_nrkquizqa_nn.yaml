@@ -1,0 +1,5 @@
+# Adapted from noreval/nrk_quiz_qa
+task: gt_nrkquizqa_nn
+dataset_name: nn
+include: _gt_nrkquizqa_default_yaml
+doc_to_text: !function utils.prompt_nn

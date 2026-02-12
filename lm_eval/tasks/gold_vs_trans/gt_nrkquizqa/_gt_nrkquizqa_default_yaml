@@ -1,0 +1,17 @@
+# Adapted from noreval/nrk_quiz_qa
+dataset_path: ltg/nrk_quiz_qa
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: test
+doc_to_target: "{{choices.label.index(answer)}}"
+doc_to_choice: "[{% for label in choices.label %}\"({{ label }})\"{% if not loop.last %}, {% endif %}{% endfor %}]"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0
