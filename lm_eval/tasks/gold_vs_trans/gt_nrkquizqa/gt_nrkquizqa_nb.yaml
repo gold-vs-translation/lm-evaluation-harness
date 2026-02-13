@@ -2,4 +2,4 @@
 task: gt_nrkquizqa_nb
 dataset_name: nb
 include: _gt_nrkquizqa_default_yaml
-doc_to_text: !function prompt_nb
+doc_to_text: !function utils.prompt_nb
