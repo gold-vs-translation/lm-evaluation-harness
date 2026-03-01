@@ -1,0 +1,7 @@
+"include": "_default_gt_gmmlux_template_yaml"
+"dataset_name": "international_law_DA"
+"task": "gt_gmmlux_da-international_law"
+"tag": "gt_gmmlux_humanities"
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nSvar:"
