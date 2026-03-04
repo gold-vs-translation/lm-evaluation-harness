@@ -10,7 +10,7 @@ LANGS = [
     "EN",
     "ET",
     "LT",
-    # "NB",
+    "NB",
     "SV",
 ]
 
@@ -20,7 +20,7 @@ PROMPT_WORDS = {
     "EN": ("Question", "Choices", "Answer"),
     "ET": ("Küsimus", "Vastusevariandid", "Vastus"),
     "LT": ("Klausimas", "Pasirinkimai", "Atsakymas"),
-    # "NB": ("Spørsmål", "Svaralternativer", "Svar"),
+    "NB": ("Spørsmål", "Svaralternativer", "Svar"),
     "SV": ("Fråga", "Svarsalternativ", "Svar"),
 }
 
@@ -29,7 +29,7 @@ CHOICES = {
     "EN": ("A", "B", "C", "D"),
     "ET": ("A", "B", "C", "D"),
     "LT": ("A", "B", "C", "D"),
-    # "NB": ("A", "B", "C", "D"),
+    "NB": ("A", "B", "C", "D"),
     "SV": ("A", "B", "C", "D"),
 }
 
