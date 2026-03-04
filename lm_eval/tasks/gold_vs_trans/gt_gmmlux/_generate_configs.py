@@ -7,6 +7,7 @@ import yaml
 
 LANGS = [
     "DA",
+    "EN",
     "ET",
     "LT",
     # "NB",
@@ -16,6 +17,7 @@ LANGS = [
 
 PROMPT_WORDS = {
     "DA": ("Spørgsmål", "Svarmuligheder", "Svar"),
+    "EN": ("Question", "Choices", "Answer"),
     "ET": ("Küsimus", "Vastusevariandid", "Vastus"),
     "LT": ("Klausimas", "Pasirinkimai", "Atsakymas"),
     # "NB": ("Spørsmål", "Svaralternativer", "Svar"),
@@ -24,6 +26,7 @@ PROMPT_WORDS = {
 
 CHOICES = {
     "DA": ("A", "B", "C", "D"),
+    "EN": ("A", "B", "C", "D"),
     "ET": ("A", "B", "C", "D"),
     "LT": ("A", "B", "C", "D"),
     # "NB": ("A", "B", "C", "D"),

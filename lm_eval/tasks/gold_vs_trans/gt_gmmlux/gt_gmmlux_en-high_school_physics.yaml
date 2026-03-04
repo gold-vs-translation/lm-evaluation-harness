@@ -1,0 +1,7 @@
+"include": "_default_gt_gmmlux_template_yaml"
+"dataset_name": "high_school_physics_EN"
+"task": "gt_gmmlux_en-high_school_physics"
+"tag": "gt_gmmlux_stem"
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nAnswer:"
